@@ -40,9 +40,9 @@ img{max-width:100%}
 .cd-title{margin:28px 0 12px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(17px,4vw,22px)}
 .cd-title span:before,.cd-title span:after{content:'';display:inline-block;width:clamp(18px,6vw,40px);height:1px;background:var(--gold);vertical-align:middle;margin:0 10px}
 .countdown{display:flex;gap:clamp(6px,2vw,12px)}
-.countdown>div{width:clamp(60px,17vw,86px);padding:10px 4px;background:linear-gradient(#7a1f2b,#4a0c11);border:1px solid var(--gold);border-radius:10px;box-shadow:inset 0 0 0 3px #4a0c11,inset 0 0 0 4px #c4953266}
+.countdown>div{width:clamp(60px,17vw,86px);padding:10px 4px;background:linear-gradient(#e53935,#b71c1c);border:1px solid var(--gold);border-radius:10px;box-shadow:0 4px 10px #b71c1c44,inset 0 0 0 3px #c62828,inset 0 0 0 4px #f2d78c88}
 .countdown b{display:block;font-family:'Cinzel',serif;font-size:clamp(22px,6vw,30px);color:var(--goldl)}
-.countdown small{font-family:'Cormorant Garamond',serif;font-size:12px;color:#f5dfad}
+.countdown small{font-family:'Cormorant Garamond',serif;font-size:12px;color:#fff1d0}
 .scroll{margin-top:16px;color:var(--gold);font-size:30px;text-decoration:none;animation:bob 1.8s ease-in-out infinite}
 @keyframes bob{50%{transform:translateY(6px)}}
 
@@ -66,7 +66,7 @@ section p{line-height:1.9;max-width:640px;margin:0 auto}
 .timeline .when{margin:4px 0;line-height:1.5}
 .timeline em{font-style:normal;color:#a46d16;font-weight:700;font-size:18px}
 .timeline .venue{margin:10px 0 14px;flex:1}
-.map-link{padding:10px 20px;border-radius:30px;border:1px solid var(--gold);background:linear-gradient(135deg,var(--goldl),var(--gold));color:#401012;font-family:Cinzel,serif;font-size:12px;font-weight:700;text-decoration:none}
+.map-link{padding:10px 20px;border-radius:30px;border:1px solid var(--gold);background:linear-gradient(135deg,var(--goldl),var(--gold));color:#401012;font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:700;text-transform:none;letter-spacing:.3px;text-decoration:none}
 @media(min-width:1000px){.timeline{grid-template-columns:repeat(4,1fr)}}
 .closing{background:var(--deep);color:#f5dfad}
 .closing .om{font-size:48px;color:#e8c86f}
