@@ -1,0 +1,86 @@
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+:root{--th:clamp(60px,12.6vw,130px);--maroon:#6e1423;--deep:#3b0b0f;--gold:#c49532;--goldl:#f2d78c;--cream:#fff8e8;--ink:#4a2020}
+body{margin:0;text-align:center;color:var(--ink);background:var(--cream);font-family:'Noto Serif Telugu',Georgia,serif;overflow-x:hidden}
+img{max-width:100%}
+.petals{position:fixed;inset:0;pointer-events:none;z-index:50;overflow:hidden}
+.petal{position:absolute;top:-30px;width:12px;height:16px;border-radius:70% 0 70% 0;opacity:.75;animation:fall linear forwards}
+@keyframes fall{to{transform:translate(var(--dx),110vh) rotate(var(--r))}}
+
+/* HERO */
+.hero{position:relative;min-height:100svh;overflow:hidden;color:var(--maroon);
+ background:linear-gradient(rgba(255,248,232,.78),rgba(251,236,205,.88)),url(assets/wedding-background.jpg) center/cover}
+.toran{position:fixed;top:0;left:0;width:100%;height:var(--th);object-fit:cover;object-position:top;z-index:45;pointer-events:none;-webkit-mask-image:linear-gradient(#000 60%,transparent 99%);mask-image:linear-gradient(#000 60%,transparent 99%);filter:drop-shadow(0 4px 6px #5a2d0a22)}
+.hero-inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;padding:calc(var(--th) - 8px) clamp(34px,9vw,90px) 36px;margin-top:0}
+.ganesha{width:clamp(80px,18vw,130px);height:auto;filter:drop-shadow(0 6px 10px #7a1f2b44);animation:float 5s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-6px)}}
+.telugu-top{font-weight:700;color:#9a6424;margin:6px 0 0;font-size:clamp(15px,4vw,20px)}
+.blessing,.together,.request{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(15px,3.8vw,20px);color:#6b3a2a;margin:2px 0;line-height:1.6}
+.divider{display:flex;align-items:center;gap:10px;color:var(--gold);margin:10px 0;width:min(260px,70%)}
+.divider i{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.divider i:last-child{background:linear-gradient(270deg,transparent,var(--gold))}
+.couple{display:flex;align-items:center;justify-content:center;gap:clamp(8px,2vw,18px);margin:4px 0 8px}
+.couple span{font-family:'Great Vibes',cursive;font-size:clamp(46px,12vw,92px);line-height:1.15;color:var(--maroon);text-shadow:0 2px 0 #fff8,0 4px 14px #c4953240}
+.couple b{font-family:Georgia,serif;font-size:clamp(18px,4vw,30px);color:var(--gold)}
+.date-card{position:relative;display:grid;grid-template-columns:repeat(3,1fr);width:min(100%,520px);margin:18px 0 16px;padding:14px 6px;background:#fff8e6e6;border:1px solid var(--gold);border-radius:6px;box-shadow:0 8px 22px #7a1f2b1c}
+.date-card:before{content:"";position:absolute;inset:4px;border:1px solid #c9a35a88;border-radius:3px;pointer-events:none}
+.date-card:after{content:"";position:absolute;inset:-3px;pointer-events:none;background:radial-gradient(circle,var(--gold) 0 2.5px,transparent 3px) 0 0/100% 100% no-repeat;
+ -webkit-mask:none;background:
+ radial-gradient(circle at 0 0,var(--gold) 0 3px,transparent 4px),radial-gradient(circle at 100% 0,var(--gold) 0 3px,transparent 4px),
+ radial-gradient(circle at 0 100%,var(--gold) 0 3px,transparent 4px),radial-gradient(circle at 100% 100%,var(--gold) 0 3px,transparent 4px);}
+.di{display:flex;flex-direction:column;align-items:center;gap:2px;padding:2px 6px;border-left:1px solid #c9a35a77}
+.di:first-child{border-left:0}
+.di svg{width:22px;height:22px;fill:none;stroke:var(--gold);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin-bottom:2px}
+.di small{font-family:'Cormorant Garamond',serif;font-size:11px;color:#8a6a4a;letter-spacing:.5px}
+.di strong{font-family:'Cormorant Garamond',serif;font-size:clamp(12px,3.3vw,15px);font-weight:700;color:var(--maroon);line-height:1.3}
+.di sup{font-size:.65em}
+
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:11px 26px;border-radius:30px;text-decoration:none;color:#401012;background:linear-gradient(135deg,var(--goldl),var(--gold));font-family:Cinzel,serif;font-size:12px;font-weight:700;letter-spacing:.5px;box-shadow:0 6px 14px #c4953255;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.cd-title{margin:28px 0 12px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(17px,4vw,22px)}
+.cd-title span:before,.cd-title span:after{content:'';display:inline-block;width:clamp(18px,6vw,40px);height:1px;background:var(--gold);vertical-align:middle;margin:0 10px}
+.countdown{display:flex;gap:clamp(6px,2vw,12px)}
+.countdown>div{width:clamp(60px,17vw,86px);padding:10px 4px;background:linear-gradient(#7a1f2b,#4a0c11);border:1px solid var(--gold);border-radius:10px;box-shadow:inset 0 0 0 3px #4a0c11,inset 0 0 0 4px #c4953266}
+.countdown b{display:block;font-family:'Cinzel',serif;font-size:clamp(22px,6vw,30px);color:var(--goldl)}
+.countdown small{font-family:'Cormorant Garamond',serif;font-size:12px;color:#f5dfad}
+.scroll{margin-top:16px;color:var(--gold);font-size:30px;text-decoration:none;animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(6px)}}
+
+/* SECTIONS */
+section{padding:clamp(50px,9vw,80px) clamp(16px,4vw,24px)}
+h2{font-family:Cinzel,serif;color:#68191c;font-size:clamp(22px,5vw,34px);margin:.4em 0}
+section p{line-height:1.9;max-width:640px;margin:0 auto}
+.story{position:relative;padding-top:0;background:var(--cream)}
+.mango{display:block;width:min(100%,900px);margin:0 auto 10px}
+.telugu{color:#9a6424;font-size:clamp(17px,4vw,20px);font-weight:600}
+.couple-art{width:min(300px,70%);margin:10px auto;display:block;border-radius:50%;border:3px solid var(--gold);box-shadow:0 0 0 6px #c4953222}
+.events{background:linear-gradient(#fff8e8,#fdf0d2)}
+.sub{font-family:'Cormorant Garamond',serif;font-style:italic;color:#9a6424;font-size:18px}
+.timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:22px;max-width:1100px;margin:30px auto 0}
+.timeline article{background:#fffdf8;border:1px solid #c89b3c66;border-top:4px solid var(--gold);padding:28px 16px;box-shadow:0 12px 30px #51250f14;border-radius:8px;display:flex;flex-direction:column;align-items:center}
+.timeline article.featured{background:linear-gradient(#fffdf8,#fcf0cf);border-color:var(--gold);box-shadow:0 14px 34px #7d242830}
+.icon{width:128px;height:128px;border-radius:50%;background:#fff;border:3px solid var(--gold);box-shadow:0 0 0 4px #c4953222;overflow:hidden;flex-shrink:0}
+.icon img{width:100%;height:100%;object-fit:contain;padding:8px;display:block}
+.day{font-family:Cinzel,serif;letter-spacing:2px;font-size:12px;color:#fff4d5;background:#7d2428;padding:5px 12px;border-radius:20px;margin:12px 0 4px}
+.timeline h3{margin:6px 0;font-size:clamp(18px,4.5vw,21px);color:#68191c}
+.timeline .when{margin:4px 0;line-height:1.5}
+.timeline em{font-style:normal;color:#a46d16;font-weight:700;font-size:18px}
+.timeline .venue{margin:10px 0 14px;flex:1}
+.map-link{padding:10px 20px;border-radius:30px;border:1px solid var(--gold);background:linear-gradient(135deg,var(--goldl),var(--gold));color:#401012;font-family:Cinzel,serif;font-size:12px;font-weight:700;text-decoration:none}
+@media(min-width:1000px){.timeline{grid-template-columns:repeat(4,1fr)}}
+.closing{background:var(--deep);color:#f5dfad}
+.closing .om{font-size:48px;color:#e8c86f}
+.closing h2{color:#efce7b}
+.names{font-family:Garamond,serif;font-size:clamp(36px,7vw,50px);color:#efce7b;margin:12px 0}
+footer{background:#26070a;color:#d8bb78;padding:25px 16px calc(25px + env(safe-area-inset-bottom));line-height:1.8}
+footer small{opacity:.7}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.petals{display:none}}
+
+/* Marigold garland sides with bells */
+.side{position:fixed;top:0;bottom:0;width:clamp(26px,4.4vw,52px);z-index:40;pointer-events:none;background:url(assets/garland-tile.png) repeat-y center top/100% auto;filter:drop-shadow(0 0 4px #5a2d0a55)}
+.side.left{left:0}.side.right{right:0}
+.bell{position:absolute;width:clamp(11px,1.6vw,17px);aspect-ratio:30/48;background:url(assets/bell.png) no-repeat center/100% 100%;transform-origin:top center;animation:swing 3.6s ease-in-out infinite}
+.side.left .bell{left:100%}.side.right .bell{right:100%}
+@keyframes swing{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg)}}
